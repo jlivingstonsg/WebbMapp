@@ -1,8 +1,18 @@
-<!DOCTYPE html> <!-- Comment line -->
+<!DOCTYPE html> <!-- 
+                    • The page should be encoded using the UTF-8 character set.
+                    • A page title defined in the head element.
+                    • Header element that is containing the following
+                        o Headline element of biggest size with the page name or a logo image.
+                        o Navigation element containing following
+                            ▪ Unordered list element with at least 3 list items.
+                                • One hyperlink element per list item.
+                        o Hyperlink element to the Login page.
+                 -->
     <html>
         <head>
             <meta charset="utf-8"/>
             <title>3D Tetris / BlockOut.nu </title>
+            <link rel="stylesheet" href="style.css">
             <h1>BlockOut</h1>
             <ul>
                 <li> <a href="https://blockout.nu/" target="_blank" >Extended</a> </li>
@@ -11,12 +21,59 @@
             </ul>
             <a href="LoginPage.html" target="_blank" >Login page.</a>
 
-
         </head>
     <body>
+                <!--  
+                A container element for the main content of the page that is containing the following
+                        o Headline element.
+                        o Paragraph with text.
+                        o Two article elements that is containing the following
+                            ▪ One headline element.
+                            ▪ Each should have text in at least 2 paragraphs.
+                            ▪ One should have an image.
+                --> 
+        <div class="main1-container">
+        <h1>(container element) I challenge you in 3D Tetris / BlockOut.nu </h1>        
+        <p>This is a paragraph with text about BlockOut.</p>               
+            <article class="article1-container">
+                <h1>(article1) I challenge you in 3D Tetris / BlockOut.nu </h1>
+                <p> This is a paragraph1 with text about BlockOut.</p>        
+                <p> This is a paragraph2 with text about BlockOut.                    
+                    <img src="https://tinyurl.com/ygn7plp7" alt="Pic of 3d Tetris" >
+                </p>     
+       
+            </article>
 
-        <h1>I challenge you in 3D Tetris / BlockOut.nu </h1>        
-        <p>This is a paragraph.</p>
+            <article class="article2-container">
+                <h1>(article2) I challenge you in 3D Tetris / BlockOut.nu </h1>
+                <p> This is a paragraph1 with text about BlockOut.</p>       
+                <p> This is a paragraph2 with text about BlockOut.</p>               
+        
+            </article>
 
+        </div >
+                <!-- 
+                    Aside element that is containing the following
+                    o Headline element.
+                    o Unordered list of 3 list items, each that is containing the following
+                        ▪ Headline with a nation name
+                        ▪ Ordered list with 3 list items, each that is containing the following
+                            • Paragraph with name of city according to size.   
+                -->
+        <aside class="Aside1-element">
+            <h4>(Aside1) I challenge you in 3D Tetris / BlockOut.nu</h4>
+            <ol>
+                <li>Extended  <p> This is a paragraph/Aside1 with text about BlockOut.</p> </li>
+                <li>Basic     <p> This is a paragraph/Aside1 with text about BlockOut.</p>  </li>
+                <li>Flat      <p> This is a paragraph/Aside1 with text about BlockOut.</p>  </li>
+              </ol>        </aside>      
+
+              <!--    
+                  A footer element that is containing the following
+                        o Span element with html code for a copyright glyph and your name.
+              -->
+        <footer>    
+            <p>Copyright &#169 <span> BlockOut.nu</span> 2021</p>
+        </footer>
     </body>
 </html>
