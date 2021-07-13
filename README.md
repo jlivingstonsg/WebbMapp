@@ -1,7 +1,7 @@
 # WebbMapp
 Basic HTML Fundamentals Front-End Fundamentals
 
-GitHub server webpage: <b>
+GitHub server webpage: <br>
 https://jlivingstonsg.github.io/WebbMapp/
 
 Regards MagI
