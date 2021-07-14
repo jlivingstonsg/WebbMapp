@@ -1,46 +1,45 @@
-/* medium  yellow   */
-body {  
-    /* All text on the pages should use a sans-serif font family. */
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        /*  
-        The pages should be 1024 pixels wide, and be centered on the page, with equal margins 
-        to the left and right. 
-        */
-    width: 1024px;    
-    text-align: center;
-    margin: 10px; 
-    background-color: #edf794;
-    
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: right; }
+.item4 { grid-area: footer; }
 
-
+.grid-container1 {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu menu menu menu right right'
+    'footer footer footer footer footer footer';
+  grid-gap: 5px;
+  background-color: #2196F3;
+  padding: 10px;
 }
 
-    /* 
-    Give the Index page the following element positional appearance.
-        o The boxes show where elements should be positioned, you do not need them to 
-        have the same color/border appearance on you page
-    */
+.grid-container1 > div {
+  background-color: #C999F3;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 30px;
+}
+/* ----------------------------------------------------------- */ 
+.item11 { grid-area: Sitename; }
+.item12 { grid-area: Menuitem1; }
+.item13 { grid-area: Menuitem2; }
+.item14 { grid-area: Menuitem3; }
+.item15 { grid-area: Login; }
 
-* {
-    box-sizing: border-box;
-    }
-.index.topnav {
-/* Style the top navigation bar */
-    overflow: hidden;
-    background-color: #333;
+.grid-container2 {
+  display: grid;
+  text-align: center;
+  grid-template-areas:
+    'Sitename Menuitem1 Menuitem2 Menuitem3 Login';
+  grid-gap: 15px;
+  background-color: #2196F3;
+  padding: 10px;
 }
 
-.index.topnav {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-
+.grid-container2 > h1 div a {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 30px;
 }
-
-.index.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
