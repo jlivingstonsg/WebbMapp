@@ -1,5 +1,14 @@
-footer {text-align: center;}
-.item1 { grid-area: header; }
+/* a class item15 text color white, text-align right size 20 padding 20 with green background.*/
+.item15 {color: black; text-align: center; font-size: 30px; padding: 20px; background-color: lightgoldenrodyellow;}
+footer {text-align: center; color: white;} 
+/* ----------------------------------------------------------- */ 
+
+.item11 { grid-area: Sitename; }
+.item12 { grid-area: Menuitem1; }
+.item13 { grid-area: Menuitem2; }
+.item14 { grid-area: Menuitem3; }
+.item141 { grid-area: Menuitem4; }
+.item15 { grid-area: Login; }
 .item2 { grid-area: menu; }
 .item3 { grid-area: right; }
 .item4 { grid-area: footer; }
@@ -7,40 +16,17 @@ footer {text-align: center;}
 .grid-container1 {
   display: grid;
   grid-template-areas:
-    'header header header header header header'
-    'menu menu menu menu right right'
-    'footer footer footer footer footer footer';
-  grid-gap: 5px;
-  background-color: #2196F3;
-  padding: 10px;
+    'Sitename Sitename Menuitem1 Menuitem2 Menuitem3 Menuitem4 Menuitem4 Menuitem4 Login'
+    'menu     menu     menu      menu      menu      menu      right     right     right'
+    'footer   footer   footer    footer    footer    footer    footer    footer    footer';
+  grid-gap: 2px;
+  background-color: #061018;
+  padding: 5px;
 }
 
-.grid-container1 > div {
-  background-color: #C999F3;
+.grid-container1 > div  {
+  background-color: lightgoldenrodyellow ;
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
   font-size: 30px;
-}
-/* ----------------------------------------------------------- */ 
-.item11 { grid-area: Sitename; }
-.item12 { grid-area: Menuitem1; }
-.item13 { grid-area: Menuitem2; }
-.item14 { grid-area: Menuitem3; }
-.item15 { grid-area: Login; }
-
-.grid-container2 {
-  display: grid;
-  text-align: center;
-  grid-template-areas:
-    'Sitename Menuitem1 Menuitem2 Menuitem3 Login';
-  grid-gap: 15px;
-  background-color: #2196F3;
-  padding: 10px;
-}
-
-.grid-container2 > h3 div a {
-  background-color: #C999F3;
-  text-align: center;
-  padding: 10px 0;
-  font-size: 30px;
-}
+}  /* ----------------------------------------------------------- */ 
