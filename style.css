@@ -1,17 +1,19 @@
+body{ max-width: 1024px; margin: auto;}
 /* a class item15 text color white, text-align right size 20 padding 20 with green background.*/
-.item15 {color: black; text-align: center; font-size: 30px; padding: 20px; background-color: lightgoldenrodyellow;}
-footer {text-align: center; color: white;} 
+
 /* ----------------------------------------------------------- */ 
 
-.item11 { grid-area: Sitename; }
-.item12 { grid-area: Menuitem1; }
-.item13 { grid-area: Menuitem2; }
-.item14 { grid-area: Menuitem3; }
-.item141 { grid-area: Menuitem4; }
-.item15 { grid-area: Login; }
-.item2 { grid-area: menu; }
-.item3 { grid-area: right; }
-.item4 { grid-area: footer; }
+div , .item11 { grid-area: Sitename; background-color: green; }
+/* change   background color yellow to blue in  <div> */
+a, .item12 { grid-area: Menuitem1; text-align: center; font-size: 20px; color: black ; 
+  background-color: lightblue; padding: 22px; }
+a, .item13 { grid-area: Menuitem2; text-align: center; font-size: 20px; }
+a, .item14 { grid-area: Menuitem3; text-align: center; font-size: 20px; }
+.item141 { grid-area: Menuitem4; text-align: center; font-size: 20px; }
+.item15 { grid-area: Login; color: black; text-align: center; font-size: 20px; padding: 20px; background-color: lightgoldenrodyellow; }
+div, .item2 { grid-area: menu; font-size: 20px; }
+div, .item3 { grid-area: right; background-color: lightblue }
+.item4 { grid-area: footer; text-align: center; color: white; background-color: purple; }
 
 .grid-container1 {
   display: grid;
@@ -20,6 +22,7 @@ footer {text-align: center; color: white;}
     'menu     menu     menu      menu      menu      menu      right     right     right'
     'footer   footer   footer    footer    footer    footer    footer    footer    footer';
   grid-gap: 2px;
+  text-align: center;
   background-color: #061018;
   padding: 5px;
 }
@@ -29,4 +32,45 @@ footer {text-align: center; color: white;}
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
-}  /* ----------------------------------------------------------- */ 
+}  
+/* ----------------------------------------------------------- */ 
+.item2 h1, p, article { grid-area: article; font-size: 10px; }
+
+img, .pic2 { grid-area: pic2; background-color: lightblue; max-width: 50px; max-height: 50px; }
+
+.grid-container2 {
+  display: grid;
+  grid-template-areas:
+    'article ';
+  grid-gap: 20px;
+  background-color: lightgoldenrodyellow;
+  padding: 20px;
+}
+
+.grid-container2 >  .article  {
+  background-color: lightgoldenrodyellow ;
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+/* ----------------------------------------------------------- */ 
+h4 { font-size: 20px; text-align: left; }
+
+/*set size of text to 20  */
+.item21 h4, ul, li { grid-area: Aside1; font-size: 10px; }
+
+.grid-container3 {
+  display: grid;
+  grid-template-areas:
+    'Aside1 ';
+  grid-gap: 2px;
+  background-color: #061018;
+  padding: 2px;
+}
+
+.grid-container3 >  .item21  {
+  background-color: lightgoldenrodyellow ;
+  text-align: center;
+  padding: 2px 0;
+}
