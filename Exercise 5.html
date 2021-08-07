@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5 – Days until Christmas</title>
+
+</head>
+<body>
+    <h3>Days until Christmas</h3>
+	<!-- Div for containing daysUntilChristmas -->
+	<div id="daysUntilChristmas"><h3>-----------------------------------------------</h3></div>
+<script>
+    /*
+    Days until Christmas:
+    Add an element to your page that displays the days until next Christmas. 
+
+    Required Features:
+    • A text display on the page, showing the number of days until next Christmas.
+    */
+        function daysUntilChristmas() 
+        {
+            var today = new Date();
+            // Get this year 
+            var thisYear = today.getFullYear(); 
+            var christmas = new Date(thisYear, 11, 25);
+            var days = christmas.getTime() - today.getTime();
+            days = Math.round(days / (1000 * 60 * 60 * 24));
+            document.getElementById("daysUntilChristmas").innerHTML = days;
+        }
+        daysUntilChristmas();
+</script>
+</body>
+</html>
