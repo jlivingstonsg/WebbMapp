@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 4 – Guessing game</title>
+
+</head>
+<body>
+    <h3>Guessing game</h3>
+    <h3>Add an input field that lets you enter a number between 1 and 10, <br> 
+        and check whether the number entered is the same as a random number created by the script.</h3>
+	<!-- Div for containing guessingGame -->
+	<div id="guessingGame">
+    <h3>-----------------------------------------------</h3></div>
+    <h3>-----------------------------------------------</h3>
+    <input type="text" id="number" name="number" placeholder="Enter a number">
+    <input type="submit" value="Submit">
+<script>
+/*
+Guessing game:
+
+Add an input field that lets you enter a number between 1 and 10, 
+that checks whether the number entered is the same as a random number created by the script.
+
+Required Features:
+• An input field that takes a number and calls the script when submitted. The page should not be refreshed.
+• A script that checks whether the number entered is the same as the random number, and presents the result on the page, 
+as a message either “Good Job” if guess is correct or “Did not match” if the numbers are not the same.
+*/
+    function guessingGame() 
+    {
+        var number = document.getElementById("number").value;
+        var randomNumber = Math.floor(Math.random() * 10) + 1;
+        if (number == randomNumber) {
+            document.getElementById("guessingGame").innerHTML = "Good Job!:  " + randomNumber;
+        } else {
+            document.getElementById("guessingGame").innerHTML = "Did not match: " + randomNumber;
+        }
+    }
+    document.getElementById("number").onchange = guessingGame;
+    document.getElementById("number").onkeyup = guessingGame;
+</script>
+</body>
+</html>
