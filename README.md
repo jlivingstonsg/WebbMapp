@@ -1,7 +1,7 @@
 # WebbMapp
 JavaScript Exercises Front-End Development
 
-Check Exercises in commits.  <br>
+Check Exercises   <br>
 
 https://blockout.nu
 
