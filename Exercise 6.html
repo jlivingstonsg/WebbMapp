@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 6 – Reverse input</title>
+
+</head>
+<body>
+    <h3>Exercise 6 – Reverse input</h3>
+    <h3>Input a string of numbers or characters, that reverses the input and prints it on the page.</h3>
+	<!--Div for containing january1stSunday-->
+	<div id="reverseInput"><h3>-----------------------------------------------</h3></div>
+    <h3>-----------------------------------------------</h3>
+    <input type="text" id="numbers" name="numbers" placeholder="Enter a string of numbers or characters">
+    <input type="submit" value="Submit">
+<script>
+/*
+Reverse input:
+Add an input field that lets you input a string of numbers or characters,  
+that reverses the input and prints it on the page.
+Example: 
+Input: 12345
+Expected output: 54321
+
+Required Features:
+• An input field that takes a string of numbers or characters and calls the script when submitted. 
+
+The page should not be refreshed.
+• A script that reverse the input, and presents the result on the page, as a message.
+
+Subjects:
+• String manipulation with JavaScript.
+
+*/
+    function reverseInput()
+    {
+                var input = document.getElementById("numbers").value;
+        var output = input.split("").reverse().join("");
+        document.getElementById("reverseInput").innerHTML = output;
+    }
+    document.getElementById("numbers").addEventListener("keyup", reverseInput, false);
+</script>
+</body>
+</html>
