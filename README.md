@@ -1,7 +1,8 @@
 # WebbMapp
-Basic HTML Fundamentals Front-End Fundamentals
+JavaScript Exercises Front-End Development
 
-GitHub server webpage: <br>
-https://jlivingstonsg.github.io/WebbMapp/
+Check Exercises in commits.  <br>
+
+https://blockout.nu
 
 Regards MagI

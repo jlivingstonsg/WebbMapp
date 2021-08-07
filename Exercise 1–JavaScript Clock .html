@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Clock</title>
+</head>
+<body>
+    <h1>JavaScript Clock</h1>
+    <h3>The expected output should be similar to: "Saturday, 07/01/2015 15:37:00"</h3>
+	<!--
+        Div for containing JavaScript Clock
+        The expected output should be similar to: “Saturday, 07/08/2021 15:37:00.
+    -->
+	<div id = "javaScriptClock"></div> 
+    
+<script>
+/*
+JavaScript Clock
+Add an element to your page that displays the current date, time and which day of the week it is, 
+and write a JavaScript script that updates it every second so that it always shows the current time. 
+
+The expected output should be similar to: “Saturday, 07/08/2021 15:37:00”.
+
+Required Features:
+    •A text display on the page, showing weekday, date and time.
+        oThe time should be updated in real time, to ensure it stays accurate.
+
+Subjects:
+  •Updating text with JavaScript.
+*/
+function javaScriptClock() {
+      var now = new Date();
+    var weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+    var day = weekday[now.getDay()];
+    var date = now.getDate();
+    var month = now.getMonth() + 1;
+    var year = now.getFullYear();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+    var time = hours + ":" + minutes + ":" + seconds;
+    document.getElementById("javaScriptClock").innerHTML = day + ", " + date + "/" + month + "/" + year + " " + time;
+    setTimeout(javaScriptClock, 1000);
+}
+javaScriptClock();
+</script>
+</body>
+</html>
