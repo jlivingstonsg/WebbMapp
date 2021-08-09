@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Exercise 12 </title>
+</head>
+<body>
+    <h3> Add a script for loop, that will iterate from 0-15 and for every iteration display if the number is even or odd.     </h3>
+	<div id="ifLoopStatement"></div>
+  
+<script>
+/*
+Add a script for loop, that will iterate from 0-15 and for every iteration display if the number is even or odd. 
+
+Expected output: 
+“0 is even” 
+“1 is odd” 
+“2 is even” 
+“3 is odd”
+...
+*/
+    function ifLoopStatement()
+    {
+        var i = 0;
+        var evenOrOdd = "";
+        var evenOrOddMessage = "";
+        while (i < 16) {
+            if (i % 2 == 0) {
+                evenOrOdd = "even";
+                evenOrOddMessage += " ___" + i + " ___" +  evenOrOdd + "<br>"; 
+            } else {
+                evenOrOdd = "odd";
+                evenOrOddMessage += " ___" + i + " ___" + evenOrOdd + "<br>"; 
+            }
+            i++;
+        }
+        document.getElementById("ifLoopStatement").innerHTML =  evenOrOddMessage;
+
+    }
+    ifLoopStatement();
+</script>
+</body>
+</html>

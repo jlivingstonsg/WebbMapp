@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Exercise 11  </title>
+</head>
+<body>
+    <h3> 
+         Input:  A single value as a parameter. <br>
+         Log the value type of the parameter to the console, <br> 
+         Input: string  <br>
+         Output:  “string” <br>
+    </h3>
+	<div id="valueType"><h3>-------------------------------------------</h3></div>
+    <h3>---------------------------------------------------------------</h3>
+    <input id="valuesort" name="valuesort" placeholder=" Enter a value. " >
+    <input type="submit" value="Submit">
+<script>
+/*
+Input:  A single value as a parameter. 
+Log the value type of the parameter to the console.
+
+Input: string
+Output:  “string” 
+
+Input: boolean
+Output:  “boolean” 
+
+Input: number
+Output:  “number” 
+*/
+   
+
+    function checkNumber(x) {
+        var xx = document.getElementById("valuesort").value;
+        // check if the passed value is a number
+        if(typeof x == 'number' && !isNaN(x))
+        {
+
+            // check if it is integer
+            if (Number.isInteger(x)) {
+                console.log(`${x} is integer.`);
+                document.getElementById("valueType").innerHTML = "Integer"; 
+
+            }
+            else {
+                console.log(`${x} is a float value.`);
+                document.getElementById("valueType").innerHTML = "float value";
+
+            }
+
+        } else {
+            console.log(`${x} is not a number`);
+            document.getElementById("valueType").innerHTML = "Is not a number";
+
+        }
+}
+
+checkNumber('hello');
+checkNumber(44);
+//checkNumber(3.4);
+//checkNumber(-3.4);
+//checkNumber(NaN);
+
+
+
+    document.getElementById("valuesort").onchange  = valueType;
+    document.getElementById("valuesort").onkeyup   = valueType;
+    document.getElementById("valuesort").onkeydown = valueType;
+
+</script>
+</body>
+</html>
