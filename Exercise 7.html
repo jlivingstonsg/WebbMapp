@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Input a word and output all its letters and possible parts of the word.
+    </title>
+
+</head>
+<body>
+    <h3> Input a word and output all its letters and possible parts of the word.
+    </h3>
+    <h3> Example:  <br>Input:  text    <br>Output: t, te, tex, text, e, ex, ext, x, xt, t  </h3> 
+	<!--Div for containing lettersAndWordParts-->
+	<div id="lettersAndWordParts"><h3>-------------------------- Solution ---------------------------</h3></div>
+    <h3>-----------------------------------------------</h3>
+    <input type="text" id="word" name="word" placeholder=" Enter a word. " >
+    <input type="submit" value="Submit">
+<script>
+/*
+Letters and word parts:
+Input a word and output all its letters and possible parts of the word.
+
+Example 1: 
+Input:  t[0]t[1]t[2]t[3]t[4]t[5]t[6]t[7]t[8]t[9] ....... t[n-2]t[n-1]t[n]
+Expected: t[0], t[0]t[1], t[0]t[1]t[2], t[0]t[1]t[2]t[3], ........ t[n-2], t[n-2]t[n-1], t[n-2]t[n-1]t[n], t[n-1], t[n-1]t[n], t[n] 
+
+Example 2: 
+Input:  t[0]t[1]t[2]t[3]
+Expected: t[0], t[0]t[1], t[0]t[1]t[2], t[0]t[1]t[2]t[3], t[1], t[1]t[2], t[1]t[2]t[3], t[2], t[2]t[3], t[3]
+
+Example 3:
+Input:  sol 
+Output: s, so, sol, o, ol, l
+
+Example 4: 
+Input:  text
+Expected: t, te, tex, text, e, ex, ext, x, xt, t
+
+Example 5:
+Input: solen
+Output: s, so, sol, sole, solen, o, ol, ole, olen, l, le, len, e, en, n 
+*/
+    function lettersAndWordParts()
+    {
+        var word = document.getElementById("word").value;
+        var wordLength = word.length;
+        var wordPart = "";
+        var lettersAndWordParts = "";
+        var letters = "";
+        var i = 0;
+        var j = 0;
+        var letter = "";
+        for (i = 0; i < wordLength; i++)
+        {
+            letters = word.substring(i, i + 1);
+            lettersAndWordParts = lettersAndWordParts +  "_";
+            for (j = 0; j < wordLength; j++)
+            {
+                wordPart = word.substring(i, j + 1);
+                if (wordPart.length == 1)
+                {
+                    lettersAndWordParts = lettersAndWordParts + wordPart + "_";
+                }
+                else
+                {
+                    lettersAndWordParts = lettersAndWordParts + wordPart + "_";
+                }
+            }
+            lettersAndWordParts = lettersAndWordParts + "_";
+        }
+        document.getElementById("lettersAndWordParts").innerHTML = lettersAndWordParts;
+    }
+
+
+
+    document.getElementById("word").onchange = lettersAndWordParts;
+    document.getElementById("word").onkeyup = lettersAndWordParts;
+</script>
+</body>
+</html>
