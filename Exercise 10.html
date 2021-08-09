@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Exercise 10  </title>
+</head>
+<body>
+    <h3> Input a number, and checks whether the number is a prime or not. </h3>
+	<!--Div for containing alphabeticalOrder-->
+	<div id="primeNumber"><h3>------------- Solution -------------</h3></div>
+    <h3>-----------------------------------------------</h3>
+    <input type="text" id="number" name="number" placeholder=" Enter a number. " >
+    <input type="submit" value="Submit">
+<script>
+/*
+Prime number
+Add an input field that lets you enter a number, and checks whether the number entered is a prime or not.
+*/
+    function primeNumber()
+    {
+        var number = document.getElementById("number").value;
+        var isPrime = true;
+        for (var i = 2; i < number; i++) {
+            if (number % i == 0) {
+                isPrime = false;
+            }
+        }
+        if (isPrime) {
+            document.getElementById("primeNumber").innerHTML = "The number is a prime number.";
+        }
+        else {
+            document.getElementById("primeNumber").innerHTML = "The number is not a prime number.";
+        }
+    }
+
+    
+
+    document.getElementById("number").onchange  = primeNumber;
+    document.getElementById("number").onkeyup   = primeNumber;
+    document.getElementById("number").onkeydown = primeNumber;
+
+</script>
+</body>
+</html>
