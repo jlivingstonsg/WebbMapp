@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Input a word and output all its letters in alphabetical order. </title>
+</head>
+<body>
+    <h3> Input a word and output all its letters in alphabetical order.<br> Input: “javascript” Expected output: aacijprstv </h3>
+	<!--Div for containing alphabeticalOrder-->
+	<div id="alphabeticalOrder"><h3>-------------------------- Solution ---------------------------</h3></div>
+    <h3>-----------------------------------------------</h3>
+    <input type="text" id="word" name="word" placeholder=" Enter a word. " >
+    <input type="submit" value="Submit">
+<script>
+/*
+Input a word and output all its letters in alphabetical order.
+
+Example: Input: “javascript” Expected output: aacijprstv
+*/
+    function alphabeticalOrder()
+    {
+        var word = document.getElementById("word").value;
+        var letters = [];
+        for (var i = 0; i < word.length; i++)
+        {
+            letters.push(word.charAt(i));
+        }
+        letters.sort();
+        document.getElementById("alphabeticalOrder").innerHTML = "------------- " + letters.join("") + "------------------"; 
+    }
+
+    document.getElementById("word").onchange = alphabeticalOrder;
+    document.getElementById("word").onkeyup = alphabeticalOrder;
+    document.getElementById("word").onkeydown = alphabeticalOrder;
+
+</script>
+</body>
+</html>
