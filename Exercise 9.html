@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Exercise 9 </title>
+</head>
+<body>
+    <h3> Input a sentence  </h3>   
+    <h3> Output:  Converts the first letter of each word. </h3>
+    <h3> Output:  Find word/words with most letters. </h3>   
+    <h3> Example: Input: “welcome to JavaScript”   Expected output: Welcome To JavaScript – the longest word is JavaScript </h3>
+    
+	
+    <div id="convertTheFirstLetterOfEachWordToUpperCase" style="padding: 20px; background-color: white;  display: inline-block;">------</div>
+    <div id="findAllWordsWithMostLetters" style="padding: 20px; background-color: white; display: inline-block;">------</div>
+    <h3>-----------------------------------------------</h3>
+    <input size="100" type="text" id="sentence" name="sentence" placeholder=" Enter a sentence. " >
+    <input type="submit" value="Submit">    
+<script>
+/*
+Input: Enter a sentence. 
+
+Outout: All words with most letters.
+*/
+   
+    function findAllWordsWithMostLetters()
+    {
+        var sentence1 = document.getElementById("sentence").value;
+        var sentenceArray = sentence1.split(" ");
+        var newSentence = "";
+        for (var i = 0; i < sentenceArray.length; i++)
+        {
+            var currentWord = sentenceArray[i];
+            if (currentWord.length > 0)
+            {
+                var firstLetter = currentWord[0];
+                firstLetter = firstLetter.toUpperCase();
+                currentWord = currentWord.substring(1);
+                currentWord = firstLetter + currentWord;
+                newSentence = newSentence + currentWord;
+                if (i < sentenceArray.length - 1)
+                {
+                    newSentence = newSentence + " ";
+                }
+            }
+        }
+        document.getElementById("convertTheFirstLetterOfEachWordToUpperCase").innerHTML = newSentence;
+        
+        
+        
+        var sentence = document.getElementById("sentence").value;
+        var words = sentence.split(" ");
+        var max = 0;
+
+
+        for(var i = 0; i < words.length; i++)
+        {
+            var word = words[i];
+            var count = 0;
+            for(var j = 0; j < word.length; j++)
+            {
+                if(word[j] === " ")
+                {
+                    continue;
+                }
+                count++;
+            }
+            if(count > max)
+            {
+                max = count;
+            }
+        }
+        var output = "";
+        for(var i = 0; i < words.length; i++)
+        {
+            var word = words[i];
+            var count = 0;
+            for(var j = 0; j < word.length; j++)
+            {
+                if(word[j] === " ")
+                {
+                    continue;
+                }
+                count++;
+            }
+            if(count === max)
+            {
+                output += word + " ";
+            }
+        }        
+        document.getElementById("findAllWordsWithMostLetters").innerHTML = "<h3> - Longest word/s are: "+ output +"</h3>";
+    }
+    document.getElementById("sentence").onchange  = findAllWordsWithMostLetters;
+    document.getElementById("sentence").onkeyup   = findAllWordsWithMostLetters;
+    document.getElementById("sentence").onkeydown = findAllWordsWithMostLetters;
+
+</script>
+</body>
+</html>
