@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Exercise 16 </title>
+</head>
+<body>
+    <h3> Add a script that will remove duplicates items in an array.    </h3>
+
+	<div id="removeDuplicatesItemsInAnArray"><h3>-------------------------- Solution ---------------------------</h3></div>
+    <h3>-----------------------------------------------</h3>
+    <input type="text" id="array" name="array" placeholder=" Enter an array. " >
+    <input type="submit" value="Submit">
+<script>
+/*
+Add a script that will remove duplicates and spaces in an array.
+Required Features:
+• An input field that takes an array of items and calls the script when submitted. 
+• A script that will find the duplicates of items in the array and presents the result on the page, as a message.
+*/
+    function removeDuplicatesItemsInAnArray()
+    {
+        var array = document.getElementById("array").value;
+        //remove spaces
+        array = array.replace(/\s+/g, '');
+        //remove duplicates
+        var array = array.split(",");
+        var array = array.filter
+        (
+            function(item, index, array) 
+            {
+                return array.indexOf(item) == index;
+            }
+        );
+        document.getElementById("removeDuplicatesItemsInAnArray").innerHTML = array.join(",");
+    }
+    document.getElementById("array").onchange = removeDuplicatesItemsInAnArray;
+    document.getElementById("array").onkeyup = removeDuplicatesItemsInAnArray;
+    document.getElementById("array").onkeydown = removeDuplicatesItemsInAnArray;
+
+</script>
+</body>
+</html>
