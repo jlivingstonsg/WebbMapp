@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Exercise 15 </title>
+</head>
+<body>
+    <h3> Sort the numbers in an array according to size and display it.    </h3>
+    <h3> Sample array: var numbers = [4, 1, 9, -2, 5] </h3>
+    <h3> Expected output: -2, 1, 4, 5, 9. </h3>
+	<div id="sortTheNumbersInAnArrayAccordingToSizeAndDisplayIt"></div>
+  
+<script>
+/*
+Add a script that will sort the numbers in an array according to size and display it.
+Sample array: var numbers = [4, 1, 9, -2, 5]
+Expected output: -2, 1, 4, 5, 9.
+*/
+
+    function sortTheNumbersInAnArrayAccordingToSizeAndDisplayIt()
+    {
+        var happyNumbers = document.getElementById("happyNumbers");
+        var numbers = [4, 1, 9, -2, 5];
+        var sortedNumbers = numbers.sort(function(a, b) {
+            return a - b;
+        });
+        var sortedNumbersString = "";
+        for (var i = 0; i < sortedNumbers.length; i++) {
+            sortedNumbersString += sortedNumbers[i] + ", ";
+        }
+        document.getElementById("sortTheNumbersInAnArrayAccordingToSizeAndDisplayIt").innerHTML = " Output:   " + sortedNumbersString;
+    }
+
+sortTheNumbersInAnArrayAccordingToSizeAndDisplayIt();
+</script>
+</body>
+</html>
