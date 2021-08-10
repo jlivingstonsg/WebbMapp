@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+    <meta charset="UTF-8">
+    <title> jQuery Exercise 1  </title>
+</head>
+<body>
+    <h3>  Write a jQuery script to append a text paragraph with a text message to an element, when an input field on the page is changed.     </h3>
+
+	<div id="textParagraphWithATextMessage"></div>
+    <h3>-----------------------------------------------</h3>
+    <input type="text" id="text" name="text" placeholder=" Enter text. " >
+    <input type="submit" value="Submit">
+<script>
+/*
+Write a jQuery script to append a text paragraph with a text message to an element, when an input field on the page is changed. 
+Required Features:
+    •An input field, of any type.
+    •An element where the message will be placed. 
+Code Requirements:
+    •A listener should be created for the input field that triggers the creation of the paragraph.
+    •The paragraph containing the message should not exist until the event is triggered.
+    •The code must make use of jQuery’s event handling commands
+    •The code must use jQuery’s selectors rather than the normal JavaScript ones.
+*/
+    function textParagraphWithATextMessage()
+    {
+        var text = $('#text').val();
+        var textParagraph = $('<p>' + text + '</p>');
+        $('#textParagraphWithATextMessage').append(textParagraph);
+    }   
+    $('#text').on('input', textParagraphWithATextMessage);
+</script>
+</body>
