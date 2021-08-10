@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Exercise 19 </title>
+</head>
+<body>
+    <h3>  Output:  Convert the number of minutes into hours and minutes.  </h3>
+
+	<div id="convertTheNumberOfMinutesIntoHoursAndMinutes"><h3>-------------------------- Solution ---------------------------</h3></div>
+    <h3>-----------------------------------------------</h3>
+    <input type="number" id="minuts" name="minuts" placeholder=" Enter minuts. " >
+    <input type="submit" value="Submit">
+<script>
+/*
+Two input fields that takes a month(january, february, mars...) and a year(2019, 2020...) and output the number of days in that month and year, and presents the result on the page.
+*/
+    function convertTheNumberOfMinutesIntoHoursAndMinutes()
+    {
+        var minuts = document.getElementById("minuts").value;
+        // minuts / 60 give whole hours
+        var hours = Math.floor(minuts / 60);
+        var minutes = minuts % 60;
+        document.getElementById("convertTheNumberOfMinutesIntoHoursAndMinutes").innerHTML = "  Answer:  Hours: " + hours + "      Minutes: " + minutes;
+    }
+
+    document.getElementById("minuts").onchange  = convertTheNumberOfMinutesIntoHoursAndMinutes;
+    document.getElementById("minuts").onkeyup   = convertTheNumberOfMinutesIntoHoursAndMinutes;
+    document.getElementById("minuts").onkeydown = convertTheNumberOfMinutesIntoHoursAndMinutes;
+
+</script>
+</body>
+</html>
