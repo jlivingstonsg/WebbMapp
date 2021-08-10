@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Exercise 13 </title>
+</head>
+<body>
+    <h3> Display the first 10 “happy numbers”.    </h3>
+	<div id="happyNumbers"></div>
+  
+<script>
+/*
+Display the first 10 “happy numbers”.
+
+Expected output: 
+Nr 1: 1
+Nr 2: 7
+Nr 3: 10
+Nr 4: 13
+Nr 5: 19
+Nr 6: 23
+Nr 7: 28
+
+*/
+ // A space optimized Javascript
+    // program to check if a
+    // number is happy number
+     
+    // Returns sum of squares of
+    // digits of a number n. For
+    // example for n = 12 it
+    // returns 1 + 4 = 5
+    function sumDigitSquare(n)
+    {
+        let sq = 0;
+        while (n != 0)
+        {
+            let digit = n % 10;
+            sq += digit * digit;
+            n = parseInt(n / 10, 10);
+        }
+        return sq;
+    }
+ 
+    // Returns true if n is Happy
+    // number else returns false.
+    function isHappy(n)
+    {
+        // Keep replacing n with
+        // sum of squares of digits
+        // until we either reach 1
+        // or we end up in a cycle
+        while (true)
+        {
+ 
+            // Number is Happy if
+            // we reach 1
+            if (n == 1)
+                return true;
+ 
+            // Replace n with sum
+            // of squares of digits
+            n = sumDigitSquare(n);
+ 
+            // Number is not Happy
+            // if we reach 4
+            if (n == 4)
+                return false;
+        }
+ 
+    }
+    function displayHappyNumbers()
+    {
+        {
+            let n1 = 0;
+            var evenOrOddMessage = "";
+            for (let i = 1; i <= 100; i++)
+            {
+                if (isHappy(i))
+                {
+                    // Display the first 10 Happy numbers
+                    evenOrOddMessage += "__\t " + (n1+1) +" ___Nr: " + i + "  is Happy. <br>"; 
+                    n1 = n1 + 1;
+                }
+                else
+                {
+                    if (n1 == 10)
+
+                        break;
+                }
+        
+            }
+            
+        }
+        document.getElementById("happyNumbers").innerHTML = evenOrOddMessage;
+    }
+    displayHappyNumbers();
+
+
+
+</script>
+</body>
+</html>
