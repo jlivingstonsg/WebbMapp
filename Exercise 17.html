@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Exercise 17 </title>
+</head>
+<body>
+    <h3> Add a script that will remove the ‘null’ and ‘0’ values in an array.    </h3>
+
+	<div id="removeTheNullAnd0ValuesInAnArray"><h3>-------------------------- Solution ---------------------------</h3></div>
+    <h3>-----------------------------------------------</h3>
+    <input type="text" id="array" name="array" placeholder=" Enter an array. " >
+    <input type="submit" value="Submit">
+<script>
+/*
+Add a script that will remove the ‘null’ and ‘0’ values in an array.
+Required Features:
+    • An input field that takes an array of values and calls the script when submitted. 
+    • A script that will find the ‘null’ and ‘0’ values in the array and presents the result on the page, as a message.
+*/
+    function removeTheNullAnd0ValuesInAnArray()
+    {
+        var array = document.getElementById("array").value;
+        //remove spaces
+        array = array.replace(/\s+/g, '');
+        var array = array.split(",");
+        var array = array.filter(function(value) {
+            if (value == "null" || value == "0" || value == "00" || value == "000" || value == "0000" || value == "00000"   ) {
+                return false;
+            } else {
+                return true;
+            }
+        });
+        var array = array.join(", ");
+        document.getElementById("removeTheNullAnd0ValuesInAnArray").innerHTML = array;
+    }
+
+    document.getElementById("array").onchange = removeTheNullAnd0ValuesInAnArray;
+    document.getElementById("array").onkeyup = removeTheNullAnd0ValuesInAnArray;
+    document.getElementById("array").onkeydown = removeTheNullAnd0ValuesInAnArray;
+
+</script>
+</body>
+</html>
