@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Exercise 20 </title>
+</head>
+<body>
+    <h3>  Calculate the age from a given year.    </h3>
+
+	<div id="calculateTheAgeFromAGivenYear"><h3>-------------------------- Solution ---------------------------</h3></div>
+    <h3>-----------------------------------------------</h3>
+    <input type="number" id="year" name="year" placeholder=" Enter year. " >
+    <input type="submit" value="Submit">
+<script>
+/*
+Calculate the age from a given year.
+Sample input: 1980
+Expected output: The age is 36.*/
+    function calculateTheAgeFromAGivenYear()
+    {
+        var year = document.getElementById("year").value;
+        var age = document.getElementById("age");
+        document.getElementById("calculateTheAgeFromAGivenYear").innerHTML = "The age is:  " + (new Date().getFullYear() - year);
+    }
+
+
+    document.getElementById("year").onchange  = calculateTheAgeFromAGivenYear;
+    document.getElementById("year").onkeyup   = calculateTheAgeFromAGivenYear;
+    document.getElementById("year").onkeydown = calculateTheAgeFromAGivenYear;
+
+</script>
+</body>
+</html>
