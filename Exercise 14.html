@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Exercise 14 </title>
+</head>
+<body>
+    <h3> Join the elements in an array into a string and display it    </h3>
+    <h3> Sample array: var workDays = [“Monday”, “Tuesday”, “Wednesday”, “Thursday”, “Friday”] </h3>
+    <h3> Expected output:   Monday, Tuesday, Wednesday, Thursday and Friday are workdays. </h3>
+	<div id="happyNumbers"></div>
+  
+<script>
+/*
+Add a script to join the elements in an array into a string and display it.
+Sample array: var workDays = [“Monday”, “Tuesday”, “Wednesday”, “Thursday”, “Friday”];
+Expected output: 
+Monday, Tuesday, Wednesday, Thursday and Friday are workdays.
+*/
+
+    function joinTheElementsInAnArrayIntoAStringAndDisplayIt()
+    {
+        var workDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+        var threedays = "";
+        //Expected output:   Monday, Tuesday, Wednesday, Thursday and Friday are workdays
+        for (var i = 0; i < workDays.length - 2; i++)
+        {
+            threedays += workDays[i] + ", ";
+        }
+        document.getElementById("happyNumbers").innerHTML = "  Output:  " + threedays  + workDays[workDays.length - 2] + " and " + workDays[workDays.length - 1] + " are workdays.";
+    }
+
+       
+
+
+    
+    joinTheElementsInAnArrayIntoAStringAndDisplayIt()
+</script>
+</body>
+</html>
