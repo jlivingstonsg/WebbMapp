@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Exercise 18 </title>
+</head>
+<body>
+    <h3>  Output:  The number of days in a given month and year.  </h3>
+    <h3>  Write number of month (ex: feb = 2) and year to get days in month. </h3>
+
+	<div id="numberOfDaysInAGivenMonthYear"><h3>-------------------------- Solution ---------------------------</h3></div>
+    <h3>-----------------------------------------------</h3>
+    <input type="text" id="month" name="month" placeholder=" Enter an month. " >
+    <input type="text" id="year"  name="year"  placeholder=" Enter an year.  " >
+    <input type="submit" value="Submit">
+<script>
+/*
+Two input fields that takes a month(january, february, mars...) and a year(2019, 2020...) and output the number of days in that month and year, and presents the result on the page.
+*/
+    function numberOfDaysInAGivenMonthYear()
+    {
+        var month = document.getElementById('month').value;
+        var year = document.getElementById('year').value;
+        var daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        var daysInLeapYear = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        var days = 0;
+        if (year%4 == 0 && year%100 != 0)
+        {
+            days = daysInLeapYear[month-1];
+        }
+        else
+        {
+            days = daysInMonth[month-1];
+        }
+        document.getElementById('numberOfDaysInAGivenMonthYear').innerHTML = "Output: days in month: " + days;
+    }          
+           
+           
+    document.getElementById("year").onchange = numberOfDaysInAGivenMonthYear;
+    document.getElementById("year").onkeyup = numberOfDaysInAGivenMonthYear;
+    document.getElementById("year").onkeydown = numberOfDaysInAGivenMonthYear;
+
+</script>
+</body>
+</html>

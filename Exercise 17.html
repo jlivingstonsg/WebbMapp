@@ -32,6 +32,8 @@ Required Features:
             }
         });
         var array = array.join(", ");
+        //move cursor to input field on page load
+        document.getElementById("array").focus();
         document.getElementById("removeTheNullAnd0ValuesInAnArray").innerHTML = array;
     }
 
