@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+    <meta charset="UTF-8">
+    <title> jQuery Exercise 2  </title>
+
+    <script>
+        // A jQuery that hide id="textElementHideThis" when id="textElementHideThis"  is clicked.  
+        $(document).ready(function() {
+            $("#textElementHideThis").click(function() {
+                $("#textElementHideThis").hide();
+            });
+        });
+        // A jQuery that show id="textElementHideThis" when id="textElementShowAgain" is clicked.
+        $(document).ready(function() {
+            $("#textElementShowAgain").click(function() {
+                $("#textElementHideThis").show();
+            });
+        }); 
+        // A jQuery script id="hideshow" that when clicked, toggle the visibility of id="textElementHideThis".
+        $(document).ready(function() {
+            $("#hideshow").click(function() {
+                $("#textElementHideThis").toggle();
+            });
+        });
+
+    
+    </script>
+</head>
+<body>
+    <h3>  A jQuery script that hides a text element, when it is clicked, and reveals it again when another text element is clicked.    </h3>
+    <h3>  A button that can be clicked to toggle the visibility of an element (click once to hide, and again to hide, and so on).   </h3>
+    <h3>-----------------------------------------------</h3>
+	<div id="textElementHideThis"><h3>"Hide/Show this"</h3></div>
+    <h3>-----------------------------------------------</h3>
+	<div id="textElementShowAgain"><h3>"Show id="textElementHideThis" again on click here."</h3></div>
+    <h3>-----------------------------------------------</h3>
+    <button id="hideshow">Toggle Hide/Show id="textElementHideThis" </button>
+
+
+</body>
+</html>       
