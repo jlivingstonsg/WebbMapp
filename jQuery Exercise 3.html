@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+        
+    <meta charset="UTF-8">
+    <title> jQuery Exercise 2  </title>
+
+    <script>
+    /*
+    Create a jQuery script that changes the styling rules for an element when a button is pressed. 
+    At least three different buttons should be used.
+    Required Features:
+        • An element whose CSS rules can be manipulated (a text element etc.).
+        • At least three elements or buttons that changes the styling of the first element.
+            o One that can add styles to the element.
+            o One that can remove styles that already exist on the element.
+            o One that can toggle style rules for the element.
+    */
+    $(document).ready(function(){
+            $("#style1").click(
+                function() {
+                    $("h3").css("background-color", "red");
+            });
+            $("#style2").click(
+                function() {
+                    $("h3").css("background-color", "");
+            });
+            // Toggle h3 style="background-color" on click button id="style3" red/gren/blue
+            $("#btn").click(function() {
+                $('#logoup').toggleClass('greened');
+            });
+          
+    });
+
+   
+
+          
+
+</script>
+</head>
+<body>
+    <style>
+       #logoup {
+    color: red;
+    }
+        .greened {
+        color: green !important;
+    } 
+    </style>
+
+    <div id="logoup">  Create a jQuery script that changes the styling rules for an element when a button is pressed.     </div>
+    <h3 style="background-color:yellow">  At least three different buttons should be used.   </h3>
+   
+    <h4>-----------------------------------------------</h4>
+    <button id="style1">Change to red </button>
+    <h4>-----------------------------------------------</h4>
+    <button id="style2">Remove background </button>
+    <h4>-----------------------------------------------</h4>
+    <button id='btn'>Toggle style </button>
+
+
+</body>
+</html>       
